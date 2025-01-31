@@ -1,0 +1,13 @@
+infrastructureDefinition:
+  name: bandera-svc-infra
+  identifier: banderasvcinfra
+  orgIdentifier: default
+  projectIdentifier: default_project
+  environmentRef: banderaserviceenv
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: helmdelegateconnectorharnessng
+    namespace: bandera-service
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: true
