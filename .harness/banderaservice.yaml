@@ -1,0 +1,5 @@
+service:
+  name: bandera-service
+  identifier: banderaservice
+  orgIdentifier: default
+  projectIdentifier: default_project
