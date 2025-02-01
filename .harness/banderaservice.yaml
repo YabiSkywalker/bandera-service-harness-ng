@@ -7,13 +7,13 @@ service:
     spec:
       artifacts:
         primary:
-          primaryArtifactRef: <+input>
           sources:
             - spec:
                 connectorRef: banderaservicedockerconnector
-                imagePath: latest
+                imagePath: yabiskywalker/bandera-service-images
                 tag: <+input>
                 digest: ""
               identifier: Primary
               type: DockerRegistry
+          primaryArtifactRef: <+input>
     type: Kubernetes
