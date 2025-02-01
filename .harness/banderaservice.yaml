@@ -27,7 +27,7 @@ service:
                   connectorRef: banderaserviceharnessng
                   gitFetchType: Branch
                   paths:
-                    - bandera-service-harness-ng/bandera-svc-manifest.yaml
+                    - bandera-svc-manifest.yaml
                   repoName: bandera-service-harness-ng
                   branch: main
               skipResourceVersioning: false
