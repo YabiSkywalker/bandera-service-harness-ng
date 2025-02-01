@@ -11,9 +11,9 @@ service:
           sources:
             - spec:
                 connectorRef: banderaservicedockerconnector
-                imagePath: yabiskywalker/bandera-service-images:latest
+                imagePath: latest
                 tag: <+input>
                 digest: ""
-              identifier: banderaservice
+              identifier: Primary
               type: DockerRegistry
     type: Kubernetes
