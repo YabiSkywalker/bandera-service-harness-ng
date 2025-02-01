@@ -29,7 +29,7 @@ service:
                   paths:
                     - bandera-service-harness-ng/bandera-svc-manifest.yaml
                   repoName: bandera-service-harness-ng
-                  branch: /main
+                  branch: main
               skipResourceVersioning: false
               enableDeclarativeRollback: false
     type: Kubernetes
