@@ -3,3 +3,17 @@ service:
   identifier: banderaservice
   orgIdentifier: default
   projectIdentifier: default_project
+  serviceDefinition:
+    spec:
+      artifacts:
+        primary:
+          primaryArtifactRef: <+input>
+          sources:
+            - spec:
+                connectorRef: banderaservicedockerconnector
+                imagePath: yabiskywalker/bandera-service-images:latest
+                tag: <+input>
+                digest: ""
+              identifier: banderaservice
+              type: DockerRegistry
+    type: Kubernetes
