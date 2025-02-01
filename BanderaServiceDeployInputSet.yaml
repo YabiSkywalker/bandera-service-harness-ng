@@ -1,5 +1,6 @@
 inputSet:
   name: BanderaServiceDeployInputSet
+  tags: {}
   identifier: BanderaServiceDeployInputSet
   orgIdentifier: default
   projectIdentifier: default_project
@@ -17,4 +18,9 @@ inputSet:
                   spec:
                     artifacts:
                       primary:
-                        primaryArtifactRef: <+input>
+                        primaryArtifactRef: Primary
+                        sources:
+                          - identifier: Primary
+                            type: DockerRegistry
+                            spec:
+                              tag: <+input>
