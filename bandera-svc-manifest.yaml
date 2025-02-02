@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: java-app
-          image: openjdk:17-slim
+          image: <+artifact.image>
           ports:
             - containerPort: 8080
