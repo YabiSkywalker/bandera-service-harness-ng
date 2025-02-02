@@ -15,7 +15,7 @@ service:
                 digest: ""
               identifier: Primary
               type: DockerRegistry
-          primaryArtifactRef: <+input>
+          primaryArtifactRef: Primary
       manifests:
         - manifest:
             identifier: BanderaServiceManifest
