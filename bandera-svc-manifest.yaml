@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: java-app
-          image: <+artifact.image>
+          image: yabiskywalker/bandera-service-images:latest
           ports:
             - containerPort: 8080
