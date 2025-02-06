@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: java-app
-          image: <+artifact.primary.image>
+          image: <+artifact.imagePath>:<+artifact.tag>
           ports:
             - containerPort: 8080
