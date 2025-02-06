@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: java-app
-          image: latest
+          image: bandera-service
           ports:
             - containerPort: 8080
