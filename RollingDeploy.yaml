@@ -20,8 +20,11 @@ pipeline:
                 spec:
                   artifacts:
                     primary:
-                      primaryArtifactRef: <+input>
-                      sources: <+input>
+                      sources:
+                        - identifier: Primary
+                          type: DockerRegistry
+                          spec:
+                            tag: <+input>
           environment:
             environmentRef: banderaserviceenv
             deployToAll: false
