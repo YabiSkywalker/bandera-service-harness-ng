@@ -29,6 +29,8 @@ service:
                   paths:
                     - bandera-svc-manifest.yaml
                     - bandera-swagger-docs-service.yaml
+                    - mongo-manifest.yaml
+                    - mongo-service.yaml
                   repoName: bandera-service-harness-ng
                   branch: main
               skipResourceVersioning: false
