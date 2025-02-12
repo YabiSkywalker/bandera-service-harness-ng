@@ -5,20 +5,9 @@ service:
   projectIdentifier: default_project
   serviceDefinition:
     spec:
-      artifacts:
-        primary:
-          sources:
-            - spec:
-                connectorRef: banderaservicedockerconnector
-                imagePath: yabiskywalker/bandera-service-images
-                tag: <+input>
-                digest: ""
-              identifier: Primary
-              type: DockerRegistry
-          primaryArtifactRef: Primary
       manifests:
         - manifest:
-            identifier: BanderaServiceManifest
+            identifier: mongoServiceDefinition
             type: K8sManifest
             spec:
               store:
@@ -27,8 +16,8 @@ service:
                   connectorRef: banderaserviceharnessng
                   gitFetchType: Branch
                   paths:
-                    - bandera-svc-manifest.yaml
-                    - bandera-swagger-docs-service.yaml
+                    - mongo-manifest.yaml
+                    - mongo-service.yaml
                   repoName: bandera-service-harness-ng
                   branch: main
               skipResourceVersioning: false
