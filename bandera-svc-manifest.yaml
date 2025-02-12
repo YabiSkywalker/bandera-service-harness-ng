@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: java-app
-          image: yabiskywalker/bandera-service-images:amd64
+          image: yabiskywalker/bandera-service-images:updatedMongodb
           ports:
             - containerPort: 8080
           env:
