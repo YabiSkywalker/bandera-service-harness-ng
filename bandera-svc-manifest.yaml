@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: java-app
-          image: yabiskywalker/bandera-service-images:debugMode.1
+          image: yabiskywalker/bandera-service-images:debugMode.2
           ports:
             - containerPort: 8080
           env:
