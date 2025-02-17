@@ -31,6 +31,8 @@ service:
                     - bandera-swagger-docs-service.yaml
                   repoName: bandera-service-harness-ng
                   branch: main
+              valuesPaths:
+                - Values.yaml
               skipResourceVersioning: false
               enableDeclarativeRollback: false
     type: Kubernetes
