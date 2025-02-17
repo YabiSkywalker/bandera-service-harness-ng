@@ -15,7 +15,7 @@ service:
                 digest: ""
               identifier: Primary
               type: DockerRegistry
-          primaryArtifactRef: Primary
+          primaryArtifactRef: <+input>
       manifests:
         - manifest:
             identifier: banderasvcmanifest
