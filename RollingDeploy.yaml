@@ -40,8 +40,6 @@ pipeline:
                   spec:
                     skipDryRun: false
                     pruningEnabled: false
-                    delegateSelectors:
-                      - helm-delegate
             rollbackSteps:
               - step:
                   name: Rollback Rollout Deployment
@@ -57,5 +55,3 @@ pipeline:
                 - AllErrors
               action:
                 type: StageRollback
-        delegateSelectors:
-          - helm-delegate
