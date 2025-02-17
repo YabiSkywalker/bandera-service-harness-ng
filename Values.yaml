@@ -1,3 +1,1 @@
-image:
-  repository: "yabiskywalker/bandera-service-images"
-  tag: <artifact.image>
+image: <+artifact.image>
