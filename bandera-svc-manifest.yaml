@@ -15,7 +15,8 @@ spec:
     spec:
       containers:
         - name: java-app
-          image: image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          image: "yabiskywalker/bandera-service-images:<+artifact.primary.tag>" 
+          #image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
