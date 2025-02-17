@@ -18,9 +18,8 @@ inputSet:
                   spec:
                     artifacts:
                       primary:
-                        primaryArtifactRef: Primary
                         sources:
                           - identifier: Primary
                             type: DockerRegistry
                             spec:
-                              tag: latest
+                              tag: <+trigger.payload.tag>
