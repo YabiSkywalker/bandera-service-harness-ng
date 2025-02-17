@@ -20,6 +20,7 @@ pipeline:
                 spec:
                   artifacts:
                     primary:
+                      primaryArtifactRef: <+input>
                       sources:
                         - identifier: Primary
                           type: DockerRegistry
