@@ -29,7 +29,7 @@ service:
                   paths:
                     - bandera-svc-manifest.yaml
                     - bandera-swagger-docs-service.yaml
-                  repoName: "bandera-service-harness-ng "
+                  repoName: bandera-service-harness-ng
                   branch: main
               skipResourceVersioning: false
               enableDeclarativeRollback: false
