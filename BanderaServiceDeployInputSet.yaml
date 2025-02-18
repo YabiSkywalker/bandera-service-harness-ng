@@ -22,4 +22,4 @@ inputSet:
                           - identifier: Primary
                             type: DockerRegistry
                             spec:
-                              tag: <+input>.executionInput()
+                              tag: <+input>
