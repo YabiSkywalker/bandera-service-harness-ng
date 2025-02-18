@@ -21,4 +21,5 @@ inputSet:
                         sources:
                           - identifier: Primary
                             type: DockerRegistry
-                            spec: {}
+                            spec:
+                              tag: <+input>
