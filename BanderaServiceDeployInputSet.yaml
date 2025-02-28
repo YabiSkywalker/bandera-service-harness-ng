@@ -21,5 +21,4 @@ inputSet:
                         sources:
                           - identifier: Primary
                             type: DockerRegistry
-                            spec:
-                              tag: <+input>.executionInput()
+                            spec: {}
