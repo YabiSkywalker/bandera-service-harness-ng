@@ -1,0 +1,26 @@
+inputSet:
+  name: uMeetServiceInputSet
+  identifier: uMeetServiceInputSet
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: RollingDeploy
+    stages:
+      - stage:
+          identifier: Deploy
+          type: Deployment
+          spec:
+            service:
+              serviceRef: umeetservice
+              serviceInputs:
+                serviceDefinition:
+                  type: Kubernetes
+                  spec:
+                    artifacts:
+                      primary:
+                        primaryArtifactRef: umeetservicedockerartifact
+                        sources:
+                          - identifier: umeetservicedockerartifact
+                            type: DockerRegistry
+                            spec:
+                              tag: v0.0.1
