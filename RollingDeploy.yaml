@@ -13,18 +13,8 @@ pipeline:
         spec:
           deploymentType: Kubernetes
           service:
-            serviceRef: banderaservice
-            serviceInputs:
-              serviceDefinition:
-                type: Kubernetes
-                spec:
-                  artifacts:
-                    primary:
-                      sources:
-                        - identifier: Primary
-                          type: DockerRegistry
-                          spec:
-                            tag: <+input>
+            serviceRef: <+input>
+            serviceInputs: <+input>
           environment:
             environmentRef: banderaserviceenv
             deployToAll: false
