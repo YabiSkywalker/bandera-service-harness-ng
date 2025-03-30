@@ -22,4 +22,15 @@ service:
                   branch: main
               skipResourceVersioning: false
               enableDeclarativeRollback: false
+      artifacts:
+        primary:
+          primaryArtifactRef: <+input>
+          sources:
+            - spec:
+                connectorRef: banderaservicedockerconnector
+                imagePath: docker.io/library/mongo:latest
+                tag: <+input>
+                digest: ""
+              identifier: mongoartifactsourceidentifier
+              type: DockerRegistry
     type: Kubernetes
