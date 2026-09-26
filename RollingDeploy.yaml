@@ -56,3 +56,10 @@ pipeline:
                 - AllErrors
               action:
                 type: StageRollback
+  properties:
+    ci:
+      codebase:
+        connectorRef: banderaserviceharnessng
+        repoName: s
+        build: <+input>
+        sparseCheckout: []
