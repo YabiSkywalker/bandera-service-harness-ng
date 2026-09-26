@@ -63,3 +63,7 @@ pipeline:
         repoName: s
         build: <+input>
         sparseCheckout: []
+  flowControl:
+    barriers:
+      - name: k
+        identifier: k
