@@ -31,6 +31,11 @@ pipeline:
             deployToAll: false
             infrastructureDefinitions:
               - identifier: banderasvcinfra
+                inputs:
+                  identifier: banderasvcinfra
+                  type: KubernetesDirect
+                  spec:
+                    namespace: <+input>
           execution:
             steps:
               - step:
