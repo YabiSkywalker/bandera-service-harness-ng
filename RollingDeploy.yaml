@@ -27,15 +27,11 @@ pipeline:
                   action:
                     type: Abort
           environment:
-            environmentRef: banderaserviceenv
+            environmentRef: <+input>
             deployToAll: false
-            infrastructureDefinitions:
-              - identifier: banderasvcinfra
-                inputs:
-                  identifier: banderasvcinfra
-                  type: KubernetesDirect
-                  spec:
-                    namespace: <+input>
+            environmentInputs: <+input>
+            serviceOverrideInputs: <+input>
+            infrastructureDefinitions: <+input>
           execution:
             steps:
               - step:
