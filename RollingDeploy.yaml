@@ -91,3 +91,15 @@ pipeline:
     barriers:
       - name: k
         identifier: k
+  notificationRules:
+    - name: "n"
+      identifier: "n"
+      pipelineEvents:
+        - type: AllEvents
+      notificationMethod:
+        type: Email
+        spec:
+          userGroups: []
+          recipients:
+            - ys@yabi.dev
+      enabled: true
