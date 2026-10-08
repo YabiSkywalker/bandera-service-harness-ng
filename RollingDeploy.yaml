@@ -6,58 +6,6 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: Deploy
-        identifier: Deploy
-        description: ""
-        type: Deployment
-        spec:
-          deploymentType: Kubernetes
-          service:
-            serviceRef: umeetservice
-            serviceInputs:
-              serviceDefinition:
-                type: Kubernetes
-                spec:
-                  artifacts:
-                    primary: {}
-            failureStrategies:
-              - onFailure:
-                  errors:
-                    - AllErrors
-                  action:
-                    type: Abort
-          environment:
-            environmentRef: <+input>
-            deployToAll: false
-            environmentInputs: <+input>
-            serviceOverrideInputs: <+input>
-            infrastructureDefinitions: <+input>
-          execution:
-            steps:
-              - step:
-                  type: K8sRollingDeploy
-                  name: K8sRollingDeploy_1
-                  identifier: K8sRollingDeploy_1
-                  spec:
-                    skipDryRun: false
-                    pruningEnabled: false
-                  timeout: 10m
-            rollbackSteps:
-              - step:
-                  name: Rollback Rollout Deployment
-                  identifier: rollbackRolloutDeployment
-                  type: K8sRollingRollback
-                  timeout: 10m
-                  spec:
-                    pruningEnabled: false
-        tags: {}
-        failureStrategies:
-          - onFailure:
-              errors:
-                - AllErrors
-              action:
-                type: StageRollback
-    - stage:
         name: d
         identifier: d
         description: ""
@@ -75,18 +23,13 @@ pipeline:
                     source:
                       type: Inline
                       spec:
-                        script: echo "hello"
+                        script: |
+                          echo 'written before failing' > "$UDEPLOY_ARTIFACTS/partial.txt"
+                          exit 3
                     environmentVariables: []
                     outputVariables: []
                   timeout: 10m
         tags: {}
-  properties:
-    ci:
-      codebase:
-        connectorRef: banderaserviceharnessng
-        repoName: s
-        build: <+input>
-        sparseCheckout: []
   flowControl:
     barriers:
       - name: k
