@@ -16,6 +16,15 @@ service:
               identifier: Primary
               type: DockerRegistry
           primaryArtifactRef: Primary
+        sidecars:
+          - sidecar:
+              spec:
+                connectorRef: banderaservicedockerconnector
+                imagePath: bandera
+                tag: <+input>
+                digest: ""
+              identifier: side
+              type: DockerRegistry
       manifests:
         - manifest:
             identifier: banderasvcmanifest
