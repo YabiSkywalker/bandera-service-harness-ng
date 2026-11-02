@@ -24,7 +24,13 @@ pipeline:
             arch: Amd64
           runtime:
             type: Cloud
-            spec: {}
+            spec:
+              imageSpec:
+                imageName: ubuntu-latest
+        runMode:
+          type: Manual
+          timeout: 10m
+        description: ""
   properties:
     ci:
       codebase:
