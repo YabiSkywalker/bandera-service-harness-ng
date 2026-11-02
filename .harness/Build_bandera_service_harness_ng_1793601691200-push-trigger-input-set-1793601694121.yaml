@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_bandera_service_harness_ng_1793601691200-push-trigger-input-set
+  identifier: Build_bandera_service_harness_ng_1793601691200pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_bandera_service_harness_ng_1793601691200
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
